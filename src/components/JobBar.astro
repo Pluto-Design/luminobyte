@@ -1,0 +1,76 @@
+---
+
+interface Props {
+    text: string;
+    applyLink: string;
+    salary: string;
+}
+
+const { text, applyLink, salary}: Props = Astro.props;
+
+---
+
+<div>
+    <span>
+        <p>{text}</p>
+        <p>{salary}</p>
+    </span>
+    <a href={applyLink}>Apply</a>
+</div>
+
+<style>
+    div {
+        width: 100%;
+        margin-top: 1em;
+        border: 2px solid var(--bright-green);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div span {
+        margin-left: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-right: 1em
+    }
+
+    div a {
+        text-decoration: none;
+        border-left: 2px solid var(--bright-green);
+        padding: 1em;
+    }
+
+    div a:hover {
+        color: var(--bright-green);
+    }
+
+    @media (max-width: 768px) {
+        div {
+            flex-direction: column;
+        }
+
+        div a {
+            padding: 0;
+            border: none;
+            padding: 1em 0;
+        }
+
+        div span {
+            font-size: 0.75em;
+            margin: 1em 0;
+            padding: 0 1em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div span p {
+            margin: 1em 0;
+        }
+    }
+</style>

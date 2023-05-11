@@ -1,0 +1,48 @@
+<script>
+    let isOpen = false;
+
+    const burger = document.querySelector('.burger') as HTMLElement;
+    const navbar = document.querySelector('nav') as HTMLElement;
+
+    burger.addEventListener('click', () => {
+        if (isOpen) {
+            navbar.style.display = 'none';
+            isOpen = false;
+        } else {
+            navbar.style.display = 'flex';
+            isOpen = true;
+        }
+    });
+</script>
+
+<div class="burger">
+    <div class="burger__line"></div>
+    <div class="burger__line"></div>
+    <div class="burger__line"></div>
+</div>
+
+<style>
+    .burger {
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .burger__line {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease-in-out;
+        border-radius: 6px;
+    }
+
+    @media (min-width: 768px) {
+        .burger {
+            display: none;
+        }
+    }
+</style>

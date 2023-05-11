@@ -1,0 +1,105 @@
+---
+
+import JobBar from './JobBar.astro'
+
+---
+
+<section id="apply">
+    <h1>JOIN OUR <span>TEAM</span></h1>
+    <p>Job Listings:</p>
+    <div class="jobs">
+        <JobBar text="Mid Unreal Engine Programmer" salary="$2300 - $3000" applyLink="https://www.linkedin.com/jobs/view/2670000000/" />
+        <JobBar text="Social Media Specialist" salary="$800 - $1000" applyLink="https://www.linkedin.com/jobs/view/2670000000/" />
+        <JobBar text="Story Writer" salary="$1200 - $1450" applyLink="https://www.linkedin.com/jobs/view/2670000000/" />
+    </div>
+    <button>See More</button>
+</section>
+
+<style>
+    section {
+        width: calc(100% - 8em);
+        margin: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section h1 {
+        font-size: 3em;
+        margin-bottom: 2em;
+    }
+
+    span {
+        color: var(--bright-green)
+    }
+
+    .jobs {
+        width: calc(100% - 8em);
+        padding: 0 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    p {
+        font-size: 1em;
+        margin-left: 4em;
+        margin-right: 4em;
+        margin-bottom: 4em;
+        width: calc(100% - 8em);
+        text-align: start;
+    }
+
+    button {
+        all: unset;
+        border: 2px solid var(--bright-green);
+        cursor: pointer;
+        margin: 0 1.5em;
+        padding: 1em 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        transition: all .2s ease-in-out;
+    }
+
+    button:hover {
+        color: var(--bright-green)
+    }
+
+    @media (max-width: 768px) {
+        p {
+            margin: 1.5em 1em;
+            width: calc(100% - 2em);
+            text-align: center;
+        }
+
+        section {
+            width: 100%;
+            margin: 0em;
+        }
+
+        section h1 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .jobs {
+            padding: 0;
+            width: calc(100% - 3em);
+            padding: 0 1.5em;
+        }
+
+        button {
+            all: unset;
+            border: 2px solid var(--bright-green);
+            cursor: pointer;
+            width: calc(100% - 3em);
+            margin: 0 1.5em;
+            padding: 1em 0;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+</style>

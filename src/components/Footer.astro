@@ -1,0 +1,110 @@
+
+
+<footer id="contact">
+    <div class="logo">
+        <img src="/assets/svg/long_icon.svg" alt="Luminobyte Logo">
+    </div>
+    <div class="socials">
+        <h1>Contact us!</h1>
+        <a href="mailto:kupa@gmail.com">Email us!</a>
+        <div class="socials__icons">
+            <img src="/assets/svg/linkedin-icon.svg" alt="linkedin social media icon" class="icon" />
+            <img src="/assets/svg/facebook-icon.svg" alt="facebook social media icon" class="icon" />
+            <img src="/assets/svg/instagram-icon.svg" alt="instagram social media icon" class="icon" />
+        </div>
+    </div>
+    <p class="copyright">Website made by <a href="https://plutodesign.xyz">Pluto Design</a></p>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: row;
+        height: 20svh;
+        width: 100%;
+        margin-top: 3em;
+        padding-bottom: 4em;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .socials {
+        width: calc(50% - 14em);
+        margin: 0 7em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .socials a {
+        width: 100%;
+        border: 2px solid var(--bright-green);
+        text-align: center;
+        padding: 0.75em 0;
+        margin: 1em 0;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+
+    .socials a:hover {
+        background-color: var(--bright-green);
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        font-family: 'Source Code Pro', monospace;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .copyright a {
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    .copyright a:hover {
+        color: var(--bright-green);
+    }
+
+    @media (max-width: 1280px) {
+        .socials h1 {
+            width: calc(100% - 2rem);
+            margin: 0 1rem;
+            font-size: 1.25rem;
+            text-align: center;
+        } 
+
+        .socials {
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0;
+        }
+
+        .socials a {
+            width: calc(300px - 4em);
+        }
+
+        .socials__icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 1em
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+</style>

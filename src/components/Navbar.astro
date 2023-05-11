@@ -1,0 +1,122 @@
+---
+import Burger from "./Burger.astro";
+
+---
+
+<script>
+    const onScroll = (e: Event) => {
+        let header = document.querySelector("header")! as HTMLElement;
+        let pageHeight = (document.getElementById("home") as HTMLElement).clientHeight;
+
+        if (window.scrollY >= pageHeight) {
+            header.style.backgroundColor = "hsla(0, 0%, 0%, 0.7)"
+        } else {
+            header.style.backgroundColor = "hsla(0, 0%, 0%, 0)"
+        }
+    }
+
+    document.addEventListener("scroll", onScroll)
+</script>
+
+<header class="navbar">
+    <div>
+        <a href="#home" aria-label="Home">
+            <img src="../assets/images/BulbLogo.png" class="logo" alt="logo" width="75" height="75">
+            <span id="luminobyte-logo">Luminobyte</span>
+        </a>
+        <Burger />
+    </div>
+    <nav>
+        <a class="nav-item" aria-label="Games" href="#games">Games</a>
+        <a class="nav-item" aria-label="About" href="#about">About</a>
+        <a class="nav-item" aria-label="Apply" href="#apply">Apply</a>
+        <a class="nav-item" aria-label="Contact" href="#contact">Contact</a>
+    </nav>
+</header>
+<style>
+    .navbar {
+        padding: 1rem;
+        width: calc(100% - 2rem);
+        position: fixed;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .navbar div a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #nav-close-mobile {
+        display: none;
+    }
+
+    .navbar div a:hover > #luminobyte-logo, .navbar div a:hover  {
+        color: var(--bright-green);
+    }
+
+    .logo {
+        margin-right: 0.5rem
+    }
+
+    nav {
+        width: 70%;
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-start;
+        height: 100%;
+        display: flex;
+    }
+
+    nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 0;
+            width: 100%;
+            flex-direction: column!important;
+            display: flex;
+        }
+        
+        .navbar a img {
+            display: none!important;
+        }
+
+        .navbar div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            width: calc(100% - 2rem);
+            cursor: pointer;
+            padding: 1rem;
+        }
+
+        .navbar nav {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding-bottom: 0.5rem;
+        }
+
+        .navbar nav a {
+            margin: 0.5rem 1rem;
+        }
+
+        .navbar nav a:hover {
+            color: var(--bright-green);
+        }
+    }
+</style>

@@ -1,0 +1,98 @@
+
+
+
+<section id="about">
+    <div class="logo-long">
+        <img src="assets/svg/long_icon.svg" alt="logo-long" width="600" height="300" alt="logo long icon">
+    </div>
+    <div class="about-content">
+        <h1>Who are <span>we</span>?</h1>
+        <p class="about-content__text">We are <span>LuminoByte</span>,
+            a small indie game 
+            development team that strives 
+            for <span>bright ideas</span>, and to make 
+            awesome games for users! The team 
+            was founded on the 2nd of April 2023, 
+            so we haven't been around for long. 
+            But don't let that fool you - we are 
+            a <span>passionate and dedicated</span> group of 
+            individuals who are determined to create 
+            new and innovative games that will win 
+            over the hearts of players everywhere.
+        </p>
+    </div>
+</section>
+
+
+<style>
+    section {
+        width: 100%;
+        flex-direction: column;
+        display: flex; 
+    }
+
+    .logo-long {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0em 0 0;
+    }
+
+    .logo-long img {
+        pointer-events: none;
+        height: 100px;
+        width: auto;
+    }
+
+    .about-content {
+        width: calc(100% - 20em);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 5em 10em;
+    }
+
+    .about-content h1 {
+        width: 100%;
+        text-align: start;
+        margin-bottom: 1em;
+    }
+
+    .about-content p {
+        width: 100%;
+        text-align: start;
+        font-size: 1em;
+        font-family: 'Source Code Pro', monospace!important;
+        line-height: 1.5em;
+    }
+
+    .about-content__text {
+        font-family: 'Source Code Pro', monospace!important;
+        line-height: 1.5em;
+    }
+
+    h1 span {
+        font-family: 'Press Start 2P', cursive;
+        color: var(--bright-green);
+        font-size: 1em;
+    }
+
+    p span {
+        color: var(--bright-green);
+        font-size: 1em;
+        font-family: 'Source Code Pro', monospace!important;
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            width: calc(100% - 3em);
+            margin: 5em 1.5em;
+        }
+
+        .logo-long img {
+            height: 2em;
+        }
+    }
+</style>

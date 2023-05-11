@@ -1,0 +1,68 @@
+---
+
+import TeamCard from './TeamCard.astro'
+
+---
+
+<section id="meet-the-team">
+    <h1>Meet the <span>team</span></h1>
+
+    <div class="team-members">
+        <TeamCard name="@Miel" role="Founder" image="/assets/images/teampfp1.png" description="Greetings, friends! It's an absolute pleasure to introduce myself as Miel, the founder of LuminoByte. As the founder, I'm extremely glad and thankful to have such an incredible team of crew members on board. My passion lies in UI/UX design, with a little bit of game design thrown in for good measure. I can't wait what holds for us in the future in LuminoByte!" />
+        <TeamCard name="@Paul" role="Programmer" image="/assets/images/teampfp2.png" description="Hey, it’s Paul. If you’re looking through this code base you might catch wind of a lingering idiosyncratic pedantry. That’s me. Developer and rule-follower extraordinaire. Thanks for playing, don’t break any rules." />
+        <TeamCard name="@JakeOJeff" role="Programmer" image="/assets/images/teampfp1.png" description="Hi! I'm Jake, the guy who doesn't even understand half the complicated terms Paul says, I program because I am jobless, I am experienced in game-making, and have been programming and inclusive in web development for over 8 - 9 years. Enjoy!" />
+        <TeamCard name="@Deadzone" role="Programmer" image="/assets/images/teampfp1.png" description="Hi, I go by the name of Deadzone. I've learned a lot about Lua, and Javascript, and currently learning the Godot game engine. I've reached my first year of programming recently and I will try my best to answer any questions you may have." />
+        <TeamCard name="@sap" role="Deadzone" image="/assets/images/teampfp2.png" description="Hi everyone! My name is Tommy, but you can call me Sap! I'm a story writer/game designer and I started working on video games only 2 years ago, but I've improved a lot! Can't wait to share my stories with you all" />
+        <TeamCard name="@GabrielX24" role="Artist" image="/assets/images/teampfp1.png" description="Hello everyone, im one of the art people here, you can call me Gabe. Ive been doing pixel art for the past three years and solo game developement for the last two or so, constantly in stress, and i hate everything i create, but i hope everyone enjoys it anyways. Enjoy your stay in the server!" />
+        <TeamCard name="@Jon" role="Sound Designer | FSX" image="/assets/images/teampfp2.png" description="Hello! How's it goin? I'm Jon. I'm a long-time digital music producer of over 15 years. I'm new to making SFX for games but you're all stuck with me now. Thanks for playing games!" />
+    </div>
+</section>
+
+<style>
+    section {
+        width: calc(100% - 14em);
+        flex-direction: column;
+        display: flex;
+        margin: 0 7em; 
+        margin-top: 5em;
+    }
+
+    section h1 {
+        width: 100%;
+        text-align: end;
+        font-size: 1.25em;
+    }
+
+    span {
+        color: var(--bright-green);
+    }
+
+    .team-members {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            width: calc(100% - 4em);
+            margin: 4em 2em;
+        }
+
+        section h1 {
+            text-align: center;
+        }
+
+        .team-members {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 2em;
+        }
+    }
+</style>

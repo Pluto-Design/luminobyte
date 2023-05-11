@@ -3,7 +3,7 @@ export interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
+const { title }: Props = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -11,8 +11,13 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/assets/svg/luminobyte.svg" />
+		<meta name="description" content="We are LuminoByte, a small indie game development team that strives for bright ideas, and to make awesome games for users! I founded the team on the 2nd of April 2023, so we haven't been around for long. But don't let that fool you - we are a passionate and dedicated group of individuals who are determined to create new and innovative games that will win over the hearts of players everywhere." />
+		<meta property="og:title" content="Pluto Design - Custom Website Design" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://example.com/" />
+		<meta property="og:image" content="/assets/svg/luminobyte.svg" />
+		<meta property="og:description" content="We are LuminoByte, a small indie game development team that strives for bright ideas, and to make awesome games for users! I founded the team on the 2nd of April 2023, so we haven't been around for long. But don't let that fool you - we are a passionate and dedicated group of individuals who are determined to create new and innovative games that will win over the hearts of players everywhere.">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -20,16 +25,19 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&family=Source+Code+Pro&display=swap');
+
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Press Start 2P', cursive;
+		color: white;
+		transition: all .2s ease-in-out;
+		scroll-behavior: smooth;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+
+	body {
+		background-color: #000000;
+		--bright-green: #0CDE3A;
 	}
 </style>

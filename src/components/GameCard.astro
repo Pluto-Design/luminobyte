@@ -1,0 +1,71 @@
+---
+
+interface Props {
+    imageUrl: string;
+    text: string;
+}
+
+const { text, imageUrl }: Props = Astro.props;
+
+---
+
+<div class="game-card">
+    <img src={imageUrl} alt={text} />
+    <div class="game-card_inner">
+        <p>{text}</p>
+    </div>
+</div>
+
+<style>
+    .game-card {
+        width: 33.3%;
+        height: 100%;
+        position: relative;
+    }
+
+    .game-card_inner {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game-card:hover .game-card_inner {
+        opacity: 0.7;
+    }
+
+    .game-card_inner p {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 2.5em;
+        color: white;
+        font-size: 700;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    p {
+        width: 100%;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .game-card {
+            width: 100%;
+        }
+
+        .game-card_inner p {
+            font-size: 1.5em;
+        }
+    }
+</style>
